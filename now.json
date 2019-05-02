@@ -1,1 +1,6 @@
-{"version":2,"name":"blog","builds":[{"src":"package.json","use":"@now/next"}]}
+{
+  "version": 2,
+  "name": "blog",
+  "builds": [{ "src": "package.json", "use": "@now/next" }],
+  "alias": "thinhphan.dev"
+}
