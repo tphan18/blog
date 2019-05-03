@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header>
-      <h1>My site is under construction</h1>
+      <h1>My site is under construction!</h1>
     </header>
   )
 }
