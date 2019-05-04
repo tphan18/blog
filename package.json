@@ -5,8 +5,11 @@
     "now-build": "next build"
   },
   "dependencies": {
+    "@blueprintjs/core": "^3.15.1",
     "next": "^8.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
-  }
+  },
+  "license": "MIT",
+  "private": true
 }
