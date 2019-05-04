@@ -1,7 +1,7 @@
 import 'normalize.css/normalize.css'
 import '@blueprintjs/core/lib/css/blueprint.css'
 import '@blueprintjs/icons/lib/css/blueprint-icons.css'
-import './layout.css'
+import 'bulma/css/bulma.min.css'
 
 import {
   Navbar,
@@ -25,7 +25,16 @@ function Layout({ children }) {
         </NavbarGroup>
       </Navbar>
 
-      <div className='container'>{children}</div>
+      <div
+        className='section'
+        style={{
+          backgroundColor: '#30404d',
+          paddingTop: '70px',
+          height: '100vh'
+        }}
+      >
+        {children}
+      </div>
     </div>
   )
 }
