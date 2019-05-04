@@ -9,13 +9,14 @@ import {
   NavbarDivider,
   Button,
   Classes,
-  Alignment
+  Alignment,
+  H4
 } from '@blueprintjs/core'
 
 function Index() {
   return (
     <div className='bp3-dark'>
-      <Navbar>
+      <Navbar fixedToTop>
         <NavbarGroup align={Alignment.LEFT}>
           <NavbarHeading>thinhphan.dev</NavbarHeading>
           <NavbarDivider />
@@ -24,8 +25,14 @@ function Index() {
         </NavbarGroup>
       </Navbar>
 
-      <main>
-        <section>The site is under construction</section>
+      <main
+        style={{
+          backgroundColor: '#30404d',
+          height: '100vh',
+          paddingTop: '70px'
+        }}
+      >
+        <H4>The site is under construction</H4>
       </main>
     </div>
   )
