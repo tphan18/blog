@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import { withRouter } from 'next/router'
 import 'normalize.css/normalize.css'
 import '@blueprintjs/core/lib/css/blueprint.css'
 import '@blueprintjs/icons/lib/css/blueprint-icons.css'
@@ -13,15 +15,29 @@ import {
   Alignment
 } from '@blueprintjs/core'
 
-function Layout({ children }) {
+function Layout({ children, router }) {
   return (
     <div className='bp3-dark'>
       <Navbar fixedToTop>
         <NavbarGroup align={Alignment.LEFT}>
           <NavbarHeading>thinhphan.dev</NavbarHeading>
           <NavbarDivider />
-          <Button className={Classes.MINIMAL} icon='home' text='Home' />
-          <Button className={Classes.MINIMAL} icon='document' text='Files' />
+          <Link href='/'>
+            <Button
+              className={Classes.MINIMAL}
+              active={router.asPath === '/'}
+              icon='home'
+              text='Home'
+            />
+          </Link>
+          <Link href='/console'>
+            <Button
+              className={Classes.MINIMAL}
+              active={router.asPath === '/console'}
+              icon='console'
+              text='Console'
+            />
+          </Link>
         </NavbarGroup>
       </Navbar>
 
@@ -39,4 +55,4 @@ function Layout({ children }) {
   )
 }
 
-export default Layout
+export default withRouter(Layout)
